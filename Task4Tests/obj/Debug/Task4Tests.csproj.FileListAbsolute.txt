@@ -1,0 +1,8 @@
+D:\Sources\EPAM.BSU.01.2016.Zikov.02\Task4Tests\bin\Debug\Task4Tests.dll
+D:\Sources\EPAM.BSU.01.2016.Zikov.02\Task4Tests\bin\Debug\Task4Tests.pdb
+D:\Sources\EPAM.BSU.01.2016.Zikov.02\Task4Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Sources\EPAM.BSU.01.2016.Zikov.02\Task4Tests\bin\Debug\Task4.dll
+D:\Sources\EPAM.BSU.01.2016.Zikov.02\Task4Tests\bin\Debug\Task4.pdb
+D:\Sources\EPAM.BSU.01.2016.Zikov.02\Task4Tests\obj\Debug\Task4Tests.csprojResolveAssemblyReference.cache
+D:\Sources\EPAM.BSU.01.2016.Zikov.02\Task4Tests\obj\Debug\Task4Tests.dll
+D:\Sources\EPAM.BSU.01.2016.Zikov.02\Task4Tests\obj\Debug\Task4Tests.pdb
