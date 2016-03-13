@@ -1,0 +1,4 @@
+D:\Sources\EPAM.BSU.01.2016.Zikov.02\Task3\bin\Debug\Task3.dll
+D:\Sources\EPAM.BSU.01.2016.Zikov.02\Task3\bin\Debug\Task3.pdb
+D:\Sources\EPAM.BSU.01.2016.Zikov.02\Task3\obj\Debug\Task3.dll
+D:\Sources\EPAM.BSU.01.2016.Zikov.02\Task3\obj\Debug\Task3.pdb
