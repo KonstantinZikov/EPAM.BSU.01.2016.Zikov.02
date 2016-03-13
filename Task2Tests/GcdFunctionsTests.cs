@@ -28,7 +28,7 @@ namespace Task2Tests
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void Gcd_Put42andMinus3_ArgumentOutOfRangeExceptionExpected()
+        public void Gcd_Put42andMinus3_ArgumentOutOfRangeException()
         {
             //arrange
             int a = 42;
@@ -61,7 +61,7 @@ namespace Task2Tests
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void Gcd_PutMinus15and18and21_ArgumentOutOfRangeExceptionExpected()
+        public void Gcd_PutMinus15and18and21_ArgumentOutOfRangeException()
         {
             //arrange
             int a = -15;
@@ -96,7 +96,7 @@ namespace Task2Tests
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void Gcd_PutNullArray_ArgumentNullExceptionExpected()
+        public void Gcd_PutNullArray_ArgumentNullException()
         {
             //arrange
             int[] array = null;
@@ -110,7 +110,7 @@ namespace Task2Tests
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void Gcd_PutArrayWithNegativeElement_ArgumentOutOfRangeExceptionExpected()
+        public void Gcd_PutArrayWithNegativeElement_ArgumentOutOfRangeException()
         {
             //arrange
             int[] array = new[] {17,5,-7,23};
@@ -144,7 +144,7 @@ namespace Task2Tests
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void BinaryGcd_PutMinus78and15_ArgumentOutOfRangeExceptionExpected()
+        public void BinaryGcd_PutMinus78and15_ArgumentOutOfRangeException()
         {
             //arrange
             int a = -78;
@@ -214,7 +214,7 @@ namespace Task2Tests
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void BinaryGcd_PutNullArray_ArgumentNullExceptionExpected()
+        public void BinaryGcd_PutNullArray_ArgumentNullException()
         {
             //arrange
             int[] array = null;
@@ -228,7 +228,7 @@ namespace Task2Tests
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void BinaryGcd_PutArrayWithElementEqualToMinus1_ArgumentOutOfRangeExceptionExpected()
+        public void BinaryGcd_PutArrayWithElementEqualToMinus1_ArgumentOutOfRangeException()
         {
             //arrange
             int[] array = new[] { 17, 5, -1, 23 };
