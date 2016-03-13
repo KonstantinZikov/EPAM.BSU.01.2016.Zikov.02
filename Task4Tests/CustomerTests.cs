@@ -19,7 +19,7 @@ namespace Task4Tests
             };
             string expected = "Record: Konstantin Zikov, +375 (29) 9999999, 1000.000.";
             //act
-            string actual = customer.ToString("Record: $N, $P, $R.");
+            string actual = string.Format("{0:Record: $N, $P, $R.}", customer);
 
             //assert
             Assert.AreEqual(expected, actual);
@@ -54,9 +54,9 @@ namespace Task4Tests
                 ContactPhone = "+375 (29) 9999999",
                 Revenue = 1000.000m
             };
-            string expected = "$";
+            string expected = "$R";
             //act
-            string actual = customer.ToString("$$");
+            string actual = customer.ToString("$$R");
 
             //assert
             Assert.AreEqual(expected, actual);
@@ -90,7 +90,7 @@ namespace Task4Tests
                 ContactPhone = "+375 (29) 9999999",
                 Revenue = 1000.000m
             };
-            string expected = "Customer record: Konstantin Zikov, +375 (29) 9999999, 1000,000";
+            string expected = "Customer record: Konstantin Zikov, +375 (29) 9999999, 1000,000.";
             var ci = new CultureInfo("de-DE");
 
             //act
@@ -114,6 +114,28 @@ namespace Task4Tests
 
             //act
             string actual = customer.ToString();
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+    }
+
+    [TestClass]
+    public class CustomerRevenueFormatterTests
+    {
+        [TestMethod]
+        public void Format_CommonCustomer_FormattedView()
+        {
+            //arrange
+            var customer = new Customer()
+            {
+                Name = "Konstantin Zikov",
+                ContactPhone = "+375 (29) 9999999",
+                Revenue = 1000.000m
+            };
+            string expected = "Revenue of Konstantin Zikov is $1,000.00.";
+            //act
+            string actual = string.Format(new CustomerRevenueFormatter(),"{0:D}", customer);
 
             //assert
             Assert.AreEqual(expected, actual);

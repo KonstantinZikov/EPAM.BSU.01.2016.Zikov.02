@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task4
 {
-    public class Customer
+    public class Customer : IFormattable
     {
         public string Name { get; set; }
         public string ContactPhone { get; set; }
@@ -24,6 +24,18 @@ namespace Task4
                 Name + ", " + ContactPhone + ", " + Revenue.ToString(provider) + ".";
         }
 
+
+        /// <summary>
+        /// Formats this instance of Customer according to the next rules:
+        /// 1) "$N" transformed to Name property value;
+        /// 2) "$P" transformed to ContactPhone property value;
+        /// 3) "$R" transformed to Revenue property value;
+        /// 4) "$$" transformed to single $ sumbol;
+        /// 5) Other symbols sets remain the same.
+        /// </summary>
+        /// <param name="format">The format string, which will be transformed according to certain rules.</param>
+        /// <param name="provider">Provider for formatting the Revenue property.</param>
+        /// <returns>Formatted string view of this instance.</returns>
         public string ToString(string format, IFormatProvider provider = null)
         {
             var sb = new StringBuilder();
