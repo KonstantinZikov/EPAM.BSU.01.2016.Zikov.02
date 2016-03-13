@@ -86,7 +86,7 @@ namespace Task3Tests
             //act
             string actual = string.Format(new HexFormatter(), "{0:x}", obj);
 
-            //assert is handled by excpetion
+            //assert
             Assert.AreEqual(expected, actual);
         }
 
