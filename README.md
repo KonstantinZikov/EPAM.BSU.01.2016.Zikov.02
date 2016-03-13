@@ -2,10 +2,6 @@
 Day 2.
 Deadline – 14.03.16, 16.00.
 
-Демо с юнит тестами https://github.com/AnzhelikaKravchuk/Demo.04.03.2016, полезные ссылки
-
-https://github.com/AnzhelikaKravchuk/.NET-Training/wiki/Unit- Testing
-
 Задание 1.
 
 Разработать unit-тесты для тестирования метода Ньютона вычисления корня n-ой степени числа
