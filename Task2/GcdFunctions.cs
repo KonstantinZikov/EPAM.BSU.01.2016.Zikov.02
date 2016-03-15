@@ -5,6 +5,9 @@ namespace Task2
 {
     public static class GcdFunctions
     {
+        // fields
+        private static Stopwatch timer = new Stopwatch();
+
         #region Euclidean algorithm
         /// <summary>
         /// Returns the greatest common divisor of two numbers. GCD is calculated with Euclidean algorithm.
@@ -29,7 +32,7 @@ namespace Task2
                 throw new ArgumentOutOfRangeException("secondNumber must be greater then 0.");
             }
             timer.Restart();
-            var result = firstNumber = PureGcd(firstNumber, secondNumber);
+            var result = PureGcd(firstNumber, secondNumber);
             timer.Stop();
             time = timer.Elapsed.TotalMilliseconds;
             return result;
@@ -140,7 +143,7 @@ namespace Task2
                 throw new ArgumentOutOfRangeException("secondNumber must be greater then -1.");
             }
             timer.Restart();
-            var result = firstNumber = PureBinaryGcd(firstNumber, secondNumber);
+            var result = PureBinaryGcd(firstNumber, secondNumber);
             timer.Stop();
             time = timer.Elapsed.TotalMilliseconds;
             return result;
@@ -268,7 +271,7 @@ namespace Task2
             }
         }
 
-        private static Stopwatch timer = new Stopwatch();
+        
         #endregion
     }
 }
