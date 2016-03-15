@@ -28,6 +28,7 @@ namespace Task3
 
         /// <summary>
         /// Convert integer value to hexadecimal view. Use the 'X' symbol for uppercase and 'x' for lowercase view.
+        /// Supported types: sbyte, byte, int, long, byte, ushort, uint, ulong. 
         /// </summary>
         /// <param name="format">"string with format symbols. Must be 'X' or 'x'."</param>
         /// <param name="arg">Formatted value. Not-Integer types are not supported.</param>
@@ -61,6 +62,21 @@ namespace Task3
                 }
             }
 
+            return  format == "X" ?
+                Convert(arg).ToUpperInvariant().ToString() :
+                Convert(arg).ToLowerInvariant().ToString();
+        }
+
+        public object GetFormat(Type formatType)
+        {
+            if (formatType == typeof(ICustomFormatter))
+                return this;
+            else
+                return null;
+        }
+
+        private StringBuilder Convert(object arg)
+        {
             // Converting.
             StringBuilder sb = new StringBuilder();
             decimal decimalNumber = decimal.Parse(arg.ToString());
@@ -81,18 +97,7 @@ namespace Task3
             {
                 sb.Append('-');
             }
-            sb.Reverse();
-            return format == "X" ?
-                sb.ToUpperInvariant().ToString() :
-                sb.ToLowerInvariant().ToString();
-        }
-
-        public object GetFormat(Type formatType)
-        {
-            if (formatType == typeof(ICustomFormatter))
-                return this;
-            else
-                return null;
+            return sb.Reverse();
         }
 
         private string HandleOtherFormats(string format, object arg)

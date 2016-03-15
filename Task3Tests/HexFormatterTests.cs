@@ -103,5 +103,19 @@ namespace Task3Tests
             //assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void Format_DoubleValueAndFormatSymbolSuppotedByDefaultProvider_FormattedResult()
+        {
+            //arrange
+            double number = 71.0;
+            string expected = "71.00";
+
+            //act
+            string actual = string.Format(new HexFormatter(), "{0:F2}", number);
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
